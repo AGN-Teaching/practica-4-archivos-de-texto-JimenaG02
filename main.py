@@ -1,9 +1,8 @@
+
 import Correccion_textos as ct
 
-archivo = input("¿Cual archivo quieres leer?: ")
+archivo = input("¿Qué archivo quieres revisar?: ")
+resultado = ct.comparar_palabras(archivo)
 
-texto = open(archivo)
-
-correcion = ct.comparar_palabras(texto)
-
-print("Se encontraron ", correcion, "errores de ortografia en el archivo")
+if resultado is not None:
+    print("\nTotal de palabras incorrectas encontradas: ", resultado)
